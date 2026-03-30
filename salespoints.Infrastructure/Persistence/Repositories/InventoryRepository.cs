@@ -2,6 +2,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using salespoints.Application.DTOs.Inventory;
 using salespoints.Application.Ports.Outbound;
+using salespoints.Infrastructure.Constants;
 using salespoints.Infrastructure.Persistence.Adapters;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace salespoints.Infrastructure.Persistence.Repositories
             };
 
             var list = await ExecuteStoredProcedureAsync(
-                "inventory.sp_GetCriticalProducts",
+                StoredProcedures.Inventary.sp_GetCriticalProducts,
                 sqlParams,
                 reader =>
                 {

@@ -15,7 +15,7 @@ namespace salespoints.Infrastructure.Persistence.Adapters
         public DbSet<Product> Products { get; set; }
         public DbSet<SalesPoint> SalesPoints { get; set; }
 
-        public DbSet<InventoryItem> InventoryItem { get; set; }
+        //public DbSet<InventoryItem> InventoryItem { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

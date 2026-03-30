@@ -15,7 +15,7 @@ namespace salespoints.Infrastructure.Constants
         public static class Inventary
         {
             //Inventary
-            public const string sp_GetCriticalProducts = "[inventory].[sp_GetCriticalProducts]";
+            public const string sp_GetCriticalProducts = "sales.sp_GetCriticalProducts";
 
         }
     }

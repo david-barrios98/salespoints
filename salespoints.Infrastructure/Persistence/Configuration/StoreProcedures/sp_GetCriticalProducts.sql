@@ -8,10 +8,10 @@ BEGIN
         p.id AS product_id,
         p.code AS code_sku,
         p.name AS name,
-        inv.stock AS stock,
-        inv.minimum_stock AS minimum_stock
-    FROM inventory.inventory inv
-    INNER JOIN catalog.products p ON p.id = inv.product_id
-    WHERE inv.salespoint_id = @SalesPointId
-      AND inv.stock < inv.minimum_stock;
+        p.stock AS stock,
+        p.minimum_stock AS minimum_stock
+    FROM  [sales].[product_salespoints] inv
+	inner join [catalog].[products] p on inv.product_id = p.id
+	inner join [sales].[salespoints] s on inv.salespoint_id = s.id
+	where s.id = @SalesPointId and p.minimum_stock > p.stock;
 END
