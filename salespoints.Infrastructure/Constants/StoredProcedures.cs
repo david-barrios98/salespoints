@@ -9,6 +9,14 @@ namespace salespoints.Infrastructure.Constants
         {
             //Login
             public const string sp_login_user = "[auth].[sp_login_user]";
+
+        }
+
+        public static class Inventary
+        {
+            //Inventary
+            public const string sp_GetCriticalProducts = "sales.sp_GetCriticalProducts";
+
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
-using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using salespoints.Core.Domain.Entities;
+using salespoints.Core.Domain.Entities.Inventory;
 using salespoints.Domain.Entities.Auth;
 using salespoints.Infrastructure.Persistence.Adapters;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.Json;
 
 namespace salespoints.Infrastructure.Seed
 {
@@ -14,7 +16,10 @@ namespace salespoints.Infrastructure.Seed
             await context.Database.MigrateAsync();
 
             // ⚠️ ORDEN IMPORTANTE (FK)
-            await SeedEntity<Users>(context, "users.json");
+            //await SeedEntity<Users>(context, "users.json");
+            await SeedEntity<Product>(context, "products.json");
+            await SeedEntity<SalesPoint>(context, "salespoints.json");
+            //await SeedEntity<InventoryItem>(context, "inventary.json");
         }
 
         // =============================

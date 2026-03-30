@@ -1,0 +1,10 @@
+[
+  {
+    "code": "POS-105",
+    "name": "Punto de Venta Centro",
+    "address": "Av. Principal 123",
+    "active": true,
+    "create": "2026-01-01T00:00:00",
+    "update": "2026-01-01T00:00:00"
+  }
+]

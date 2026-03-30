@@ -19,4 +19,8 @@
 	  <ProjectReference Include="..\salespoints.Infrastructure\salespoints.Infrastructure.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Controllers\Inventory\" />
+	</ItemGroup>
+
 </Project>
