@@ -10,34 +10,34 @@ namespace salespoints.Infrastructure.Persistence.Configurations
         {
             builder.ToTable("salespoints", "sales");
 
-            builder.HasKey(s => s.Id);
-            builder.Property(s => s.Id)
+            builder.HasKey(s => s.id);
+            builder.Property(s => s.id)
                    .HasColumnName("id")
                    .ValueGeneratedOnAdd();
 
-            builder.Property(s => s.Code)
+            builder.Property(s => s.code)
                    .IsRequired()
                    .HasMaxLength(100)
                    .HasColumnName("code");
 
-            builder.Property(s => s.Name)
+            builder.Property(s => s.name)
                    .IsRequired()
                    .HasMaxLength(250)
                    .HasColumnName("name");
 
-            builder.Property(s => s.Address)
+            builder.Property(s => s.adress)
                    .HasMaxLength(500)
                    .HasColumnName("address");
 
-            builder.Property(s => s.Active)
+            builder.Property(s => s.active)
                    .HasColumnName("active")
                    .HasDefaultValueSql("((1))");
 
-            builder.Property(s => s.Create)
+            builder.Property(s => s.create)
                    .HasColumnName("create")
                    .HasDefaultValueSql("GETDATE()");
 
-            builder.Property(s => s.Update)
+            builder.Property(s => s.update)
                    .HasColumnName("update")
                    .HasDefaultValueSql("GETDATE()");
         }

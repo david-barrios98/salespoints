@@ -33,6 +33,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IFailedLoginAttemptService, FailedLoginAttemptService>();
         services.AddScoped<IHashPasswordService, HashPasswordService>();
+        services.AddScoped<IInventoryRepository, InventoryRepository>();
+
 
         return services;
     }

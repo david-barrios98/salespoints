@@ -10,38 +10,38 @@ namespace salespoints.Infrastructure.Persistence.Configurations
         {
             builder.ToTable("products", "catalog");
 
-            builder.HasKey(p => p.Id);
-            builder.Property(p => p.Id)
+            builder.HasKey(p => p.id);
+            builder.Property(p => p.id)
                    .HasColumnName("id")
                    .ValueGeneratedOnAdd();
 
-            builder.Property(p => p.Code)
+            builder.Property(p => p.code)
                    .IsRequired()
                    .HasMaxLength(100)
                    .HasColumnName("code");
 
-            builder.Property(p => p.Name)
+            builder.Property(p => p.name)
                    .IsRequired()
                    .HasMaxLength(250)
                    .HasColumnName("name");
 
-            builder.Property(p => p.Description)
+            builder.Property(p => p.description)
                    .HasMaxLength(1000)
                    .HasColumnName("description");
 
-            builder.Property(p => p.Price)
+            builder.Property(p => p.price)
                    .HasColumnName("price")
                    .HasColumnType("decimal(18,2)");
 
-            builder.Property(p => p.Active)
+            builder.Property(p => p.active)
                    .HasColumnName("active")
                    .HasDefaultValueSql("((1))");
 
-            builder.Property(p => p.Create)
+            builder.Property(p => p.create)
                    .HasColumnName("create")
                    .HasDefaultValueSql("GETDATE()");
 
-            builder.Property(p => p.Update)
+            builder.Property(p => p.update)
                    .HasColumnName("update")
                    .HasDefaultValueSql("GETDATE()");
 

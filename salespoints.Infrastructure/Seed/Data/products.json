@@ -1,0 +1,24 @@
+[
+  {
+    "code": "SKU-BREAD-01",
+    "name": "Pan Francés Congelado",
+    "description": "Pan clásico congelado para descongelar y hornear",
+    "price": 1.50,
+    "stock": 1,
+    "minimumStock": 5,
+    "active": true,
+    "create": "2026-01-01T00:00:00",
+    "update": "2026-01-01T00:00:00"
+  },
+  {
+    "code": "SKU-CAKE-05",
+    "name": "Torta de Chocolate",
+    "description": "Torta de chocolate lista para venta",
+    "price": 15.00,
+    "stock": 1,
+    "minimumStock": 5,
+    "active": true,
+    "create": "2026-01-01T00:00:00",
+    "update": "2026-01-01T00:00:00"
+  }
+]
